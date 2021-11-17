@@ -107,7 +107,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=14;2"
 
 modules-left = i3 
 modules-center = 
-modules-right =info-hackspeedc info-hackspeed uptime filesystem networkspeedup networkspeeddown arch-aur-updates pavolume xkeyboard battery date xbacklight
+modules-right = info-hackspeed uptime filesystem networkspeedup networkspeeddown arch-aur-updates pavolume xkeyboard battery date xbacklight
 separator = 
 ;dim-value = 1.0
 ; tray-position = right
@@ -754,13 +754,6 @@ format-background = ${colors.background6}
 label = %output%
 format-prefix = " "
 format-prefix-foreground = #474843
-################################################################################
-[module/speedtest]
-type = custom/script  
-exec-if = hash speedtest
-exec = "~/.config/polybar/scripts/polybar-speedtest.py"  
-interval = 600
-
 ################################################################################
 [module/temperature1]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
