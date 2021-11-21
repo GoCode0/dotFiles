@@ -9,5 +9,5 @@ Dependencies :
 - i3
 - awm
 - conky
-Work still in progress...
 
+# Work still in progress...
