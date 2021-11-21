@@ -1,4 +1,4 @@
-![Github Banner](https://github.com/GoCode0/GoCode0/blob/main/banner.png)
+![Github Banner](https://github.com/GoCode0/dotFiles/blob/main/ScreenShotAws.png)
 
 # dotFiles
 
