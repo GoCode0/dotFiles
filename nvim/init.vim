@@ -2,16 +2,17 @@
 call plug#begin()
 " Aesthetics - Main
 " Plug 'tribela/vim-transparent'
-"Plug 'neoclide/coc.nvim', {'blanch':'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'nvim-lua/plenary.nvim'
+Plug 'neoclide/coc.nvim', {'blanch':'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'mbbill/undotree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'jacoborus/tender.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-telescope/telescope.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'xiyaowong/nvim-transparent'
@@ -52,6 +53,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
 
+lua << EOF
+-- Setup nvim-cmp.
+EOF
 set completeopt=menu,menuone,noselect
 set runtimepath+=~/.config/nvim/plugged/nvim-colorizer.lua/
 set winminwidth=15
@@ -406,15 +410,6 @@ nnoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
 "Custom Mappings
 let mapleader=","
 nmap <leader>x1 :.!toilet -w 200 -f term -F border<CR>
-nmap <leader>x3 :.!figlet -c -f Poison<CR>
-nmap <leader>x2 :.!figlet -c -f emboss<CR>
-nmap <leader>x4 :.!figlet -c -f Fraktur<CR>
-nmap <leader>x5 :.!figlet -c -f pagga<CR>
-nmap <leader>x6 :.!figlet -c -f sblood<CR>
-nmap <leader>x7 :.!figlet -c -f Alligator<CR>
-nmap <leader>x8 :.!figlet -c -f Alligator2<CR>
-nmap <leader>x9 :.!figlet -c -f Computer<CR>
-nmap <leader>x0 :.!figlet -c -f usaflag<CR>
 nnoremap Y y$
 vmap <leader>Y gg"+yG 
 vmap <leader>P "+p 
